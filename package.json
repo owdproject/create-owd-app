@@ -1,0 +1,23 @@
+{
+  "name": "create-owd-app",
+  "version": "0.0.1",
+  "description": "Create an OWD App in seconds.",
+  "homepage": "https://github.com/owdproject/create-owd-app#readme",
+  "repository": {
+    "url": "https://github.com/owdproject/create-owd-app.git",
+    "type": "git"
+  },
+  "bin": "lib/cli.js",
+  "files": [
+    "lib"
+  ],
+  "author": {
+    "name": "hacklover",
+    "url": "https://github.com/hacklover"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "ora": "^5.4.1"
+  }
+}

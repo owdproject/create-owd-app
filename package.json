@@ -1,8 +1,16 @@
 {
   "name": "owd",
   "version": "0.0.1",
-  "description": "",
-  "keywords": [],
+  "description": "The official CLI for Open Web Desktop",
+  "keywords": [
+    "cli",
+    "open-web-desktop",
+    "owd",
+    "nuxt",
+    "desktop-environment",
+    "owd-client",
+    "generator"
+  ],
   "license": "MIT",
   "author": {
     "name": "dxlliv",

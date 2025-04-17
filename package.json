@@ -1,5 +1,5 @@
 {
-  "name": "owd",
+  "name": "@owdproject/cli",
   "version": "0.0.1",
   "description": "The official CLI for Open Web Desktop",
   "keywords": [

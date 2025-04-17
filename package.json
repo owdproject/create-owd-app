@@ -1,23 +1,28 @@
 {
-  "name": "create-owd-app",
-  "version": "0.0.3",
-  "description": "Create an OWD App in seconds.",
-  "homepage": "https://github.com/owdproject/create-owd-app#readme",
-  "repository": {
-    "url": "https://github.com/owdproject/create-owd-app.git",
-    "type": "git"
-  },
-  "bin": "lib/cli.js",
-  "files": [
-    "lib"
-  ],
-  "author": {
-    "name": "hacklover",
-    "url": "https://github.com/hacklover"
-  },
+  "name": "owd",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
   "license": "MIT",
-  "dependencies": {
-    "chalk": "^4.1.1",
-    "ora": "^5.4.1"
+  "author": {
+    "name": "dxlliv",
+    "url": "https://github.com/dxlliv"
+  },
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "owd": "./bin/owd.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "chalk": "5.4.1",
+    "commander": "13.1.0",
+    "fs-extra": "11.3.0",
+    "gradient-string": "3.0.0",
+    "inquirer": "12.5.2",
+    "nuxi": "3.23.1",
+    "simple-git": "3.27.0"
   }
 }

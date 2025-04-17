@@ -9,10 +9,9 @@ import fs from 'fs'
 import path from 'path'
 
 import {cloneRepo} from '../src/utils/cloneRepo.js'
-import {installPackage} from "../src/utils/installPackage.js";
 
 const program = new Command()
-const owdGradient = gradient('#0080ff', '#0A4C92')
+const owdGradient = gradient('#0080ff', '#53bdf3', '#0080ff')
 
 const logTitle = () => {
     console.log(owdGradient(`\n
@@ -23,12 +22,12 @@ const logTitle = () => {
 \\___/ | .__/ \\___|_| |_|   \\/  \\/ \\___|_.__/  /___,' \\___||___/_|\\_\\\\__\\___/| .__/ 
       |_|                                                                   |_|    
 \n`))
-    console.log(chalk.white('Launching Open Web Desktop on your computer'))
-    console.log(chalk.white('\n───────────────────────────────────────────────────────────\n'))
-    console.log(chalk.white('  ➜ ') + chalk.whiteBright('npx owd create') + chalk.gray('          Create a new project from the template'))
-    console.log(chalk.white('  ➜ ') + chalk.whiteBright('npx owd start') + chalk.gray('           Start the dev server for local development'))
-    console.log(chalk.white('  ➜ ') + chalk.whiteBright('npx owd generate') + chalk.gray('        Generate project for static deployment'))
-    console.log(chalk.white('\n───────────────────────────────────────────────────────────\n'))
+    console.log(chalk.white(summonInspiration()))
+    console.log(chalk.white('\n──────────────────────────────────────────────────────────────────────────────\n'))
+    console.log(chalk.white('  ➜ ') + chalk.whiteBright('npx @owdproject/cli create') + chalk.gray('          Create a new project from the template'))
+    console.log(chalk.white('  ➜ ') + chalk.whiteBright('npx @owdproject/cli start') + chalk.gray('           Start the dev server for local development'))
+    console.log(chalk.white('  ➜ ') + chalk.whiteBright('npx @owdproject/cli generate') + chalk.gray('        Generate project for static deployment'))
+    console.log(chalk.white('\n──────────────────────────────────────────────────────────────────────────────\n'))
 }
 
 const logServerInfo = () => {
@@ -106,16 +105,17 @@ program.command('generate')
         }
     })
 
-export const installAppCommand = (program) => {
-    program.command('install:app <source>')
-        .description('Install a new application from a Git or NPM source')
-        .action((source) => installPackage('Application', source))
-}
-
-export const installThemeCommand = (program) => {
-    program.command('install:theme <source>')
-        .description('Install a new theme from a Git or NPM source')
-        .action((source) => installPackage('Theme', source))
+function summonInspiration() {
+    const phrases = [
+        "Launching your digital workspace with Open Web Desktop",
+        "Unleashing the potential of your browser with Open Web Desktop",
+        "Crafting a better web experience with Open Web Desktop",
+        "Transforming how you showcase your portfolio on a browser",
+        "Bringing your digital garden to life, right in the browser",
+        "Opening up new possibilities with Open Web Desktop",
+    ];
+    const randomIndex = Math.floor(Math.random() * phrases.length);
+    return phrases[randomIndex];
 }
 
 program.parse()

@@ -1,13 +1,12 @@
 {
   "name": "@owdproject/cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The official CLI for Open Web Desktop",
   "keywords": [
     "cli",
     "open-web-desktop",
     "owd",
     "nuxt",
-    "desktop-environment",
     "owd-client",
     "generator"
   ],
